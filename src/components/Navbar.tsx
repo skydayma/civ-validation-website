@@ -1,25 +1,16 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 shadow-md backdrop-blur-sm py-3' : 'bg-transparent py-5'}`}>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md py-3">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <nav className="flex justify-between items-center">
           <div className="flex items-center">
@@ -39,7 +30,7 @@ const Navbar = () => {
           </div>
           
           <div className="md:hidden">
-            <Button variant="ghost" size="sm">
+            <Button variant="ghost" size="sm" onClick={toggleMobileMenu}>
               <span className="sr-only">Open menu</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-menu">
                 <line x1="4" x2="20" y1="12" y2="12"></line>
@@ -49,6 +40,20 @@ const Navbar = () => {
             </Button>
           </div>
         </nav>
+
+        {isMobileMenuOpen && (
+          <div className="md:hidden mt-4 pt-4 border-t border-gray-200">
+            <div className="flex flex-col space-y-4 pb-4">
+              <NavLink href="#features">Features</NavLink>
+              <NavLink href="#benefits">Benefits</NavLink>
+              <NavLink href="#how-it-works">How It Works</NavLink>
+              <NavLink href="#case-studies">Case Studies</NavLink>
+              <Button asChild className="bg-civ-blue hover:bg-civ-darkblue text-white w-full justify-center">
+                <a href="#contact">Request a Demo</a>
+              </Button>
+            </div>
+          </div>
+        )}
       </div>
     </header>
   );
