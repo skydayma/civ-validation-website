@@ -23,8 +23,9 @@ export const setupScrollAnimation = () => {
   // Target all elements with animation classes
   const elements = document.querySelectorAll('.animate-on-scroll');
   elements.forEach((el, index) => {
-    // Add staggered animation delay based on element index
-    el.setAttribute('style', `--delay: ${index * 0.1}s`);
+    // Add staggered animation delay based on element index within its parent
+    const parentIndex = Array.from(el.parentElement?.children || []).indexOf(el as Element);
+    el.setAttribute('style', `--delay: ${parentIndex * 0.1}s`);
     observer.observe(el);
   });
   
@@ -32,6 +33,11 @@ export const setupScrollAnimation = () => {
   const sections = document.querySelectorAll('.section-container');
   sections.forEach((section) => {
     observer.observe(section);
+  });
+  
+  // Enhanced scroll animations for specific elements
+  document.querySelectorAll('.feature-card').forEach((card, index) => {
+    card.setAttribute('style', `transition-delay: ${index * 100}ms;`);
   });
   
   return () => {
