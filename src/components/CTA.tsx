@@ -52,17 +52,6 @@ const CTA = () => {
           </div>
         </div>
       </div>
-      
-      {/* Wave divider at top */}
-      <div className="absolute top-0 left-0 right-0 transform rotate-180">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" className="w-full h-auto">
-          <path
-            fill="#F3F4F6" /* This should match the previous section's background color */
-            fillOpacity="1"
-            d="M0,32L48,37.3C96,43,192,53,288,69.3C384,85,480,107,576,101.3C672,96,768,64,864,48C960,32,1056,32,1152,48C1248,64,1344,96,1392,112L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
-          ></path>
-        </svg>
-      </div>
     </section>
   );
 };
