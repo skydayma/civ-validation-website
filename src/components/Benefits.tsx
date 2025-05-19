@@ -40,7 +40,7 @@ const benefits = [
 
 const Benefits = () => {
   return (
-    <section id="benefits" className="py-16 md:py-24 bg-gradient-to-br from-white to-gray-50 relative">
+    <section id="benefits" className="py-16 md:py-24 bg-gradient-to-br from-white to-blue-50 relative">
       {/* Background decorative elements */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-civ-lightgreen/20 rounded-full blur-3xl -z-10"></div>
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-civ-blue/10 rounded-full blur-3xl -z-10"></div>
@@ -48,7 +48,7 @@ const Benefits = () => {
       <div className="section-container relative z-10">
         <div className="text-center mb-16 animate-on-scroll">
           <span className="bg-civ-lightgreen/50 text-civ-darkblue px-4 py-2 rounded-full font-medium text-sm">Key Benefits</span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-6">Benefits of Using cIV</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-6 gradient-text">Benefits of Using cIV</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Our platform delivers tangible results that transform how validation is performed in regulated industries.
           </p>
@@ -58,10 +58,10 @@ const Benefits = () => {
           {benefits.map((benefit, index) => (
             <div 
               key={benefit.id} 
-              className="animate-on-scroll"
+              className="animate-on-scroll hover-lift"
               style={{animationDelay: `${index * 100}ms`}}
             >
-              <Card className="h-full border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+              <Card className="h-full border-none shadow-lg hover:shadow-xl transition-all duration-300 rounded-2xl overflow-hidden">
                 <div className={`h-2 w-full bg-gradient-to-r ${benefit.color}`}></div>
                 <CardContent className="p-6">
                   <div className="flex items-center justify-center mb-6">

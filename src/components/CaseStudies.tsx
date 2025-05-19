@@ -47,7 +47,7 @@ const testimonials = [
   }
 ];
 
-const TrustedBySection = () => {
+const CaseStudies = () => {
   return (
     <section id="case-studies" className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-white relative">
       {/* Background elements */}
@@ -59,14 +59,14 @@ const TrustedBySection = () => {
       <div className="section-container relative z-10">
         <div className="text-center mb-16 animate-on-scroll">
           <span className="bg-civ-blue/10 text-civ-blue px-4 py-2 rounded-full font-medium text-sm">Our Clients</span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-6">Trusted by Industry Leaders</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-6 gradient-text">Trusted by Industry Leaders</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Join hundreds of pharmaceutical and life sciences organizations that rely on cIV for their validation needs.
           </p>
         </div>
 
         {/* Logo showcase */}
-        <Card className="mb-16 shadow-lg border-none bg-white animate-on-scroll">
+        <Card className="mb-16 shadow-lg border-none bg-white/80 backdrop-blur-sm animate-on-scroll rounded-2xl">
           <CardContent className="p-8">
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center">
               {partnerLogos.map((logo) => (
@@ -99,7 +99,7 @@ const TrustedBySection = () => {
             {testimonials.map((testimonial, index) => (
               <Card 
                 key={testimonial.id} 
-                className="shadow-lg border-none hover:shadow-xl transition-all duration-300 animate-on-scroll"
+                className="shadow-lg border-none hover:shadow-xl transition-all duration-300 animate-on-scroll hover-lift rounded-2xl overflow-hidden"
                 style={{animationDelay: `${index * 150}ms`}}
               >
                 <CardContent className="p-8">
@@ -111,13 +111,13 @@ const TrustedBySection = () => {
                       </svg>
                     </div>
                     
-                    <p className="text-gray-700 mb-6 text-lg italic">"{testimonial.quote}"</p>
+                    <p className="text-gray-700 mb-6 text-lg italic">&ldquo;{testimonial.quote}&rdquo;</p>
                     
                     <div className="flex items-center">
                       <img 
                         src={testimonial.image} 
                         alt={testimonial.author} 
-                        className="w-12 h-12 rounded-full mr-4 border-2 border-civ-blue"
+                        className="w-12 h-12 rounded-full mr-4 border-2 border-civ-blue shadow-md"
                       />
                       <div className="text-left">
                         <p className="font-semibold text-gray-900">{testimonial.author}</p>
@@ -135,4 +135,4 @@ const TrustedBySection = () => {
   );
 };
 
-export default TrustedBySection;
+export default CaseStudies;

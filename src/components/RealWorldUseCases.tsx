@@ -60,7 +60,7 @@ const RealWorldUseCases = () => {
       <div className="section-container relative z-10">
         <div className="text-center mb-16 animate-on-scroll">
           <span className="bg-civ-green/20 text-civ-darkblue px-4 py-2 rounded-full font-medium text-sm">Success Stories</span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-6">Real-World Use Cases of cIV</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-6 gradient-text">Real-World Use Cases of cIV</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             See how our Continuous Intelligent Validation platform solves critical challenges across regulated industries.
           </p>
@@ -70,14 +70,14 @@ const RealWorldUseCases = () => {
           {useCase.map((item, index) => (
             <Card 
               key={item.id} 
-              className="animate-on-scroll h-full transition-all duration-300 hover:translate-y-[-8px] hover:shadow-xl border-none shadow-lg overflow-hidden"
+              className="animate-on-scroll h-full transition-all duration-300 hover:translate-y-[-8px] hover:shadow-xl border-none shadow-lg overflow-hidden rounded-2xl glass-card"
               style={{animationDelay: `${index * 150}ms`}}
             >
               <CardContent className="p-0">
                 <div className="h-2 bg-gradient-to-r from-civ-blue to-civ-green"></div>
                 <div className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-gradient-to-br from-civ-blue to-civ-darkblue w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <div className="bg-gradient-to-br from-civ-blue to-civ-darkblue w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
                       <item.icon className="h-7 w-7 text-white" />
                     </div>
                     

@@ -49,7 +49,7 @@ const CTA = () => {
                   <label className="text-sm font-medium block mb-1 text-white/90">Name</label>
                   <input 
                     type="text" 
-                    className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-civ-green"
+                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-civ-green"
                     placeholder="Enter your name"
                   />
                 </div>
@@ -57,19 +57,19 @@ const CTA = () => {
                   <label className="text-sm font-medium block mb-1 text-white/90">Email</label>
                   <input 
                     type="email" 
-                    className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-civ-green"
+                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-civ-green"
                     placeholder="Enter your email"
                   />
                 </div>
                 <div>
                   <label className="text-sm font-medium block mb-1 text-white/90">Message</label>
                   <textarea 
-                    className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-civ-green h-32"
+                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-civ-green h-32"
                     placeholder="How can we help you?"
                   ></textarea>
                 </div>
-                <div className="pt-2">
-                  <Button className="w-full bg-civ-green hover:bg-civ-green/90 text-civ-darkblue font-medium text-base py-6 shadow-lg shadow-civ-darkblue/20 hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
+                <div className="pt-4">
+                  <Button className="w-full bg-civ-green hover:bg-civ-green/90 text-civ-darkblue font-medium text-base py-6 shadow-lg shadow-civ-darkblue/20 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 rounded-xl">
                     Submit Request
                   </Button>
                 </div>
@@ -78,13 +78,13 @@ const CTA = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
                 <Button 
                   variant="outline" 
-                  className="border-white/20 bg-white/5 hover:bg-white/10 text-white flex items-center gap-2"
+                  className="border-white/20 bg-white/5 hover:bg-white/10 text-white flex items-center gap-2 rounded-xl"
                 >
                   <Phone className="h-4 w-4" /> Schedule a Call
                 </Button>
                 <Button 
                   variant="outline" 
-                  className="border-white/20 bg-white/5 hover:bg-white/10 text-white flex items-center gap-2"
+                  className="border-white/20 bg-white/5 hover:bg-white/10 text-white flex items-center gap-2 rounded-xl"
                 >
                   <Mail className="h-4 w-4" /> Email Us
                 </Button>

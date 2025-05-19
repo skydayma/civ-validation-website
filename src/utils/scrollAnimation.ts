@@ -36,12 +36,21 @@ export const setupScrollAnimation = () => {
   });
   
   // Enhanced scroll animations for specific elements
-  document.querySelectorAll('.feature-card').forEach((card, index) => {
+  document.querySelectorAll('.feature-card, .hover-lift').forEach((card, index) => {
     card.setAttribute('style', `transition-delay: ${index * 100}ms;`);
+  });
+  
+  // Add parallax effect to background elements
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    document.querySelectorAll('.bg-gradient-to-br, .bg-gradient-to-tr').forEach((gradient) => {
+      (gradient as HTMLElement).style.backgroundPosition = `center ${scrollY * 0.05}px`;
+    });
   });
   
   return () => {
     elements.forEach((el) => observer.unobserve(el));
     sections.forEach((section) => observer.unobserve(section));
+    window.removeEventListener('scroll', () => {});
   };
 };
