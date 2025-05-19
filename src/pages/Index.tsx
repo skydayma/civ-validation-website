@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import Benefits from "@/components/Benefits";
 import Process from "@/components/Process";
+import RealWorldUseCases from "@/components/RealWorldUseCases";
 import CaseStudies from "@/components/CaseStudies";
 import WhyChoose from "@/components/WhyChoose";
 import CTA from "@/components/CTA";
@@ -24,6 +25,7 @@ const Index = () => {
       <Features />
       <Benefits />
       <Process />
+      <RealWorldUseCases />
       <CaseStudies />
       <WhyChoose />
       <CTA />
