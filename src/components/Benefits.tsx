@@ -73,20 +73,20 @@ const Benefits = () => {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {benefits.map((benefit, index) => (
-            <div 
-              key={benefit.id} 
-              className="animate-on-scroll"
-              style={{animationDelay: `${index * 100}ms`}}
-            >
-              <div className="card-enhanced hover:border-civ-blue bg-white rounded-2xl p-8 flex flex-col items-center text-center">
-                {benefit.icon}
-                <div className="mt-6 mb-3 text-4xl font-bold bg-gradient-to-r from-civ-blue to-civ-darkblue bg-clip-text text-transparent">{benefit.percentage}</div>
-                <h3 className="font-semibold mb-3 text-lg">{benefit.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
-              </div>
-            </div>
-          ))}
+        {benefits.map((benefit, index) => (
+  <div 
+    key={benefit.id} 
+    className="animate-on-scroll"
+    style={{animationDelay: `${index * 100}ms`}}
+  >
+    <div className="card-enhanced hover:border-civ-blue bg-white rounded-2xl p-8 flex flex-col items-center text-center min-h-[400px]">
+      {benefit.icon}
+      <div className="mt-6 mb-3 text-4xl font-bold bg-gradient-to-r from-civ-blue to-civ-darkblue bg-clip-text text-transparent">{benefit.percentage}</div>
+      <h3 className="font-semibold mb-3 text-lg">{benefit.title}</h3>
+      <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
+    </div>
+  </div>
+))}
         </div>
       </div>
     </section>

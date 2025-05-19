@@ -100,10 +100,12 @@ const Process = () => {
           <div className="max-w-3xl w-full bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm">
             <h3 className="text-xl font-semibold mb-4 text-center">Process Visualization</h3>
             <div className="aspect-video bg-white rounded-lg border border-gray-100 flex items-center justify-center">
-              <img 
-                src="/placeholder.svg" 
-                alt="cIV Process Flow Diagram" 
-                className="max-h-full max-w-full object-contain p-4"
+              <iframe 
+                src="https://www.youtube.com/embed/2gkOm9BOYn0" 
+                title="cIV Process Flow Diagram"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full rounded-lg"
               />
             </div>
           </div>

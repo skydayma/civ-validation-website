@@ -48,8 +48,12 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <div className="flex items-center">
-            <span className="font-bold text-2xl text-white">c<span className="text-civ-blue">IV</span></span>
+        <div className="flex items-center">
+            <img 
+              src="/cIV-Logo.png" 
+              alt="xLM Logo" 
+              className="h-10 w-auto object-contain" 
+            />
           </div>
           
           <div className="mt-4 md:mt-0 text-sm opacity-75">

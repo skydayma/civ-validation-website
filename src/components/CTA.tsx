@@ -5,7 +5,7 @@ import { BadgeCheck, Phone } from 'lucide-react';
 
 const CTA = () => {
   return (
-    <section id="contact" className="py-16 md:py-24 bg-gradient-to-br from-civ-blue to-[#1E40AF] text-white relative overflow-hidden">
+    <section id="contact" className="py-16 md:py-24 bg-gradient-to-br from-[#06c286] to-[#003296] text-white relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-white blur-3xl opacity-5"></div>
@@ -45,7 +45,7 @@ const CTA = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white border-2 text-white hover:bg-white/20 hover:scale-105 transition-all duration-300 shadow-lg shadow-white/10 px-8 backdrop-blur-sm"
+              className="bg-white text-civ-blue hover:bg-gray-100 hover:scale-105 transition-all duration-300 px-8 shadow-lg shadow-civ-blue/20"
             >
               <Phone className="mr-2 h-5 w-5" /> Contact Us
             </Button>

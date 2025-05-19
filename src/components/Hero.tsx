@@ -5,7 +5,7 @@ import { FlaskConical, Dna, Brain } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="pt-32 pb-24 md:pt-40 md:pb-32 bg-gradient-to-br from-[#0F2027] via-[#2C5364] to-[#6A82FB] relative overflow-hidden">
+    <section className="pt-32 pb-24 md:pt-40 md:pb-32 bg-gradient-to-br from-[#06c286] to-[#003296] relative overflow-hidden">
       {/* Neural network background pattern overlay */}
       <div className="absolute inset-0 z-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full">
@@ -66,7 +66,7 @@ const Hero = () => {
               </Button>
               <Button 
                 variant="outline" 
-                className="border-white text-white hover:bg-white/20 px-8 py-6 text-lg rounded-lg transition-all duration-300 backdrop-blur-sm"
+                className="bg-white hover:bg-gray-100 text-civ-darkblue hover:scale-105 px-8 py-6 text-lg rounded-lg shadow-glow transition-all duration-300"
               >
                 Download Brochure
               </Button>
@@ -77,7 +77,7 @@ const Hero = () => {
             <div className="aspect-square max-w-xl mx-auto rounded-2xl bg-white/10 backdrop-blur-md p-4 border border-white/20 shadow-xl overflow-hidden relative z-10">
               <div className="h-full w-full bg-gradient-to-br from-civ-blue/30 to-civ-green/30 rounded-xl flex items-center justify-center">
                 <img 
-                  src="/placeholder.svg" 
+                  src="/chatgpt-image.png" 
                   alt="AI-driven validation visualization" 
                   className="w-3/4 h-3/4 object-contain animate-pulse-slow"
                 />

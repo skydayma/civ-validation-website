@@ -10,17 +10,17 @@ const Navbar = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md py-3">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <nav className="flex justify-between items-center">
-          <div className="flex items-center">
-            <a href="#" className="flex items-center">
-              <span className="font-bold text-2xl text-civ-darkblue">c<span className="text-civ-blue">IV</span></span>
-            </a>
-          </div>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md py-3 h-25">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="flex justify-between items-center">
+        <div className="flex items-center">
+          <a href="#" className="flex items-center">
+            <img src="/cIV-Logo.png" alt="xLM Logo" className="h-20 w-auto" />
+          </a>
+        </div>
           
           <div className="hidden md:flex space-x-8 items-center">
-            <NavLink href="#features">Features</NavLink>
+            <NavLink href="#features" >Features</NavLink>
             <NavLink href="#benefits">Benefits</NavLink>
             <NavLink href="#how-it-works">How It Works</NavLink>
             <NavLink href="#case-studies">Case Studies</NavLink>

@@ -37,7 +37,7 @@ const useCase = [
 
 const RealWorldUseCases = () => {
   return (
-    <section id="use-cases" className="py-16 md:py-24 bg-[#D3E4FD] relative">
+    <section id="use-cases" className="py-16 md:py-24 bg-gray-50 relative">
       <div className="section-container relative z-10">
         <div className="text-center mb-16 animate-on-scroll">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">💡 Real-World Use Cases of cIV in Pharma & Life Sciences</h2>
