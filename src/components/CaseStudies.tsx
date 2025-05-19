@@ -34,20 +34,20 @@ const CaseStudies = () => {
         
         <div className="grid md:grid-cols-2 gap-8">
           {caseStudies.map((study, index) => (
-            <Card key={study.id} className="animate-on-scroll overflow-hidden">
+            <Card key={study.id} className="animate-on-scroll card-enhanced overflow-hidden">
               <CardContent className="p-0">
-                <div className="bg-gray-100 h-24 flex items-center justify-center">
+                <div className="bg-gradient-to-r from-gray-50 to-white h-24 flex items-center justify-center">
                   <img 
                     src={study.logo} 
                     alt={`${study.company} logo`} 
                     className="h-16 object-contain"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{study.company}</h3>
-                  <p className="text-gray-600 mb-4">{study.description}</p>
-                  <div className="border-l-4 border-civ-blue pl-4 italic text-gray-600">
-                    "{study.quote}"
+                <div className="p-8">
+                  <h3 className="text-xl font-semibold mb-3 text-civ-darkblue">{study.company}</h3>
+                  <p className="text-gray-600 mb-5 leading-relaxed">{study.description}</p>
+                  <div className="border-l-4 border-civ-blue pl-4 italic text-gray-700 bg-gradient-to-r from-blue-50 to-transparent p-3 rounded">
+                    <p className="mb-2">"{study.quote}"</p>
                     <div className="mt-2 text-sm font-medium text-gray-900 not-italic">
                       — {study.person}
                     </div>
@@ -59,10 +59,10 @@ const CaseStudies = () => {
         </div>
         
         <div className="mt-16 text-center animate-on-scroll">
-          <h3 className="text-xl font-semibold mb-4">Trusted by Industry Leaders</h3>
+          <h3 className="text-xl font-semibold mb-6">Trusted by Industry Leaders</h3>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
             {[1, 2, 3, 4, 5].map((i) => (
-              <div key={i} className="h-12 w-32 bg-gray-100 rounded flex items-center justify-center">
+              <div key={i} className="h-12 w-32 bg-white shadow-sm rounded-xl flex items-center justify-center transition-transform hover:scale-105">
                 <img src="/placeholder.svg" alt={`Client logo ${i}`} className="h-6 opacity-60" />
               </div>
             ))}

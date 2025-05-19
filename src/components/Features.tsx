@@ -56,30 +56,8 @@ const features = [
 ];
 
 const Features = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    
-    const elements = document.querySelectorAll('.animate-on-scroll');
-    elements.forEach((el) => observer.observe(el));
-    
-    return () => {
-      elements.forEach((el) => observer.unobserve(el));
-    };
-  }, []);
-  
   return (
-    <section id="features" className="py-16 md:py-24 bg-white" ref={sectionRef}>
+    <section id="features" className="py-16 md:py-24 bg-white">
       <div className="section-container">
         <div className="text-center mb-16 animate-on-scroll">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Overview of cIV</h2>
@@ -92,13 +70,13 @@ const Features = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {features.map((feature, index) => (
             <div key={feature.id} className="animate-on-scroll" style={{animationDelay: `${index * 150}ms`}}>
-              <Card className="h-full hover:shadow-lg transition-shadow duration-300 border-t-4 border-t-civ-blue overflow-hidden">
-                <CardContent className="p-6">
-                  <div className="h-12 w-12 rounded-lg bg-civ-lightgreen flex items-center justify-center mb-4">
+              <Card className="card-enhanced feature-card h-full border-t-4 border-t-civ-blue">
+                <CardContent className="p-8">
+                  <div className="h-14 w-14 rounded-xl bg-gradient-to-br from-civ-lightgreen to-civ-blue/10 flex items-center justify-center mb-6 shadow-sm">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
+                  <h3 className="text-2xl font-semibold mb-3">{feature.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{feature.description}</p>
                 </CardContent>
               </Card>
             </div>

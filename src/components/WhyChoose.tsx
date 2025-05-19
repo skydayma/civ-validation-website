@@ -50,13 +50,13 @@ const WhyChoose = () => {
             </p>
             
             <div className="space-y-4">
-              {reasons.map((reason) => (
-                <Card key={reason.id} className="bg-white">
-                  <CardContent className="p-4 flex items-start gap-4">
-                    <div className="mt-1">{reason.icon}</div>
+              {reasons.map((reason, index) => (
+                <Card key={reason.id} className="card-enhanced bg-white hover:border-civ-blue" style={{animationDelay: `${index * 150}ms`}}>
+                  <CardContent className="p-5 flex items-start gap-4">
+                    <div className="mt-1 p-2 rounded-full bg-civ-lightgreen/50">{reason.icon}</div>
                     <div>
-                      <h3 className="font-semibold">{reason.title}</h3>
-                      <p className="text-sm text-gray-600">{reason.description}</p>
+                      <h3 className="font-semibold text-lg mb-1">{reason.title}</h3>
+                      <p className="text-gray-600 leading-relaxed">{reason.description}</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -65,42 +65,42 @@ const WhyChoose = () => {
           </div>
           
           <div className="md:w-1/2 animate-on-scroll">
-            <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-md">
-              <h3 className="text-xl font-semibold mb-4">Comparison with Traditional Methods</h3>
+            <div className="card-enhanced bg-white p-6 rounded-2xl border border-gray-100">
+              <h3 className="text-xl font-semibold mb-6">Comparison with Traditional Methods</h3>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="border-b">
-                      <th className="text-left py-3 px-4">Feature</th>
-                      <th className="text-center py-3 px-4">Traditional Validation</th>
-                      <th className="text-center py-3 px-4 bg-civ-lightgreen font-bold">cIV Platform</th>
+                      <th className="text-left py-4 px-4">Feature</th>
+                      <th className="text-center py-4 px-4">Traditional Validation</th>
+                      <th className="text-center py-4 px-4 bg-civ-lightgreen/50 font-bold rounded-t-xl">cIV Platform</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr className="border-b">
-                      <td className="py-3 px-4">Validation Time</td>
-                      <td className="text-center py-3 px-4">Weeks to Months</td>
-                      <td className="text-center py-3 px-4 bg-civ-lightgreen font-medium">Days</td>
+                      <td className="py-4 px-4">Validation Time</td>
+                      <td className="text-center py-4 px-4">Weeks to Months</td>
+                      <td className="text-center py-4 px-4 bg-civ-lightgreen/30 font-medium">Days</td>
                     </tr>
                     <tr className="border-b">
-                      <td className="py-3 px-4">Resource Requirements</td>
-                      <td className="text-center py-3 px-4">High</td>
-                      <td className="text-center py-3 px-4 bg-civ-lightgreen font-medium">Minimal</td>
+                      <td className="py-4 px-4">Resource Requirements</td>
+                      <td className="text-center py-4 px-4">High</td>
+                      <td className="text-center py-4 px-4 bg-civ-lightgreen/30 font-medium">Minimal</td>
                     </tr>
                     <tr className="border-b">
-                      <td className="py-3 px-4">Error Rate</td>
-                      <td className="text-center py-3 px-4">Medium to High</td>
-                      <td className="text-center py-3 px-4 bg-civ-lightgreen font-medium">Very Low</td>
+                      <td className="py-4 px-4">Error Rate</td>
+                      <td className="text-center py-4 px-4">Medium to High</td>
+                      <td className="text-center py-4 px-4 bg-civ-lightgreen/30 font-medium">Very Low</td>
                     </tr>
                     <tr className="border-b">
-                      <td className="py-3 px-4">Standardization</td>
-                      <td className="text-center py-3 px-4">Variable</td>
-                      <td className="text-center py-3 px-4 bg-civ-lightgreen font-medium">Consistent</td>
+                      <td className="py-4 px-4">Standardization</td>
+                      <td className="text-center py-4 px-4">Variable</td>
+                      <td className="text-center py-4 px-4 bg-civ-lightgreen/30 font-medium">Consistent</td>
                     </tr>
                     <tr>
-                      <td className="py-3 px-4">Continuous Compliance</td>
-                      <td className="text-center py-3 px-4">Difficult</td>
-                      <td className="text-center py-3 px-4 bg-civ-lightgreen font-medium">Built-in</td>
+                      <td className="py-4 px-4">Continuous Compliance</td>
+                      <td className="text-center py-4 px-4">Difficult</td>
+                      <td className="text-center py-4 px-4 bg-civ-lightgreen/30 font-medium rounded-b-xl">Built-in</td>
                     </tr>
                   </tbody>
                 </table>

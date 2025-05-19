@@ -13,10 +13,14 @@ const CTA = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-civ-blue hover:bg-gray-100 px-8">
+            <Button size="lg" className="bg-white text-civ-blue hover:bg-gray-100 hover:scale-105 transition-all duration-300 px-8 shadow-lg">
               Request a Demo
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-civ-blue/20 px-8">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-white border-2 text-white hover:bg-white/20 hover:scale-105 transition-all duration-300 shadow-white/10 shadow-lg px-8"
+            >
               Contact Us
             </Button>
           </div>
