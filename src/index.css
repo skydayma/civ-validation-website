@@ -163,6 +163,87 @@
   transform: translateY(0);
 }
 
+/* New animations for hero section */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+@keyframes title-reveal {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 10s 1s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 6s infinite;
+}
+
+.animate-title {
+  animation: title-reveal 1s 0.2s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-delayed {
+  animation: fade-in 1s 1s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Section highlighting */
+.section-container {
+  transition: transform 0.5s ease-out;
+}
+
+.section-active {
+  @apply relative;
+}
+
+.section-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 4px;
+  top: 0;
+  background: linear-gradient(to right, rgba(14, 165, 233, 0.7), rgba(150, 211, 140, 0.7));
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: section-highlight 0.8s forwards;
+}
+
+@keyframes section-highlight {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Shadow glow effect for buttons */
+.shadow-glow {
+  box-shadow: 0 0 25px rgba(14, 165, 233, 0.3);
+}
+
 /* Card hover effects */
 .feature-card {
   @apply transition-all duration-300;
