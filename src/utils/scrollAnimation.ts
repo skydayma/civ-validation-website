@@ -1,14 +1,14 @@
 
 export const setupScrollAnimation = () => {
-  // Enhanced intersection observer with better threshold and margins
+  // Enhanced intersection observer with better threshold and margins - tighter detection
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // Add a small delay for a cascading effect
+          // Add a smaller delay for a cascading effect
           setTimeout(() => {
             entry.target.classList.add('active');
-          }, 100);
+          }, 80);
           
           // Add section highlight class if it's a section container
           if (entry.target.classList.contains('section-container')) {
@@ -17,7 +17,7 @@ export const setupScrollAnimation = () => {
         }
       });
     },
-    { threshold: 0.1, rootMargin: '0px 0px -100px 0px' }
+    { threshold: 0.15, rootMargin: '0px 0px -80px 0px' }
   );
   
   // Target all elements with animation classes
@@ -25,7 +25,7 @@ export const setupScrollAnimation = () => {
   elements.forEach((el, index) => {
     // Add staggered animation delay based on element index within its parent
     const parentIndex = Array.from(el.parentElement?.children || []).indexOf(el as Element);
-    el.setAttribute('style', `--delay: ${parentIndex * 0.1}s`);
+    el.setAttribute('style', `--delay: ${parentIndex * 0.08}s`);
     observer.observe(el);
   });
   
@@ -37,14 +37,14 @@ export const setupScrollAnimation = () => {
   
   // Enhanced scroll animations for specific elements
   document.querySelectorAll('.feature-card, .hover-lift').forEach((card, index) => {
-    card.setAttribute('style', `transition-delay: ${index * 100}ms;`);
+    card.setAttribute('style', `transition-delay: ${index * 80}ms;`);
   });
   
   // Add parallax effect to background elements
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
     document.querySelectorAll('.bg-gradient-to-br, .bg-gradient-to-tr').forEach((gradient) => {
-      (gradient as HTMLElement).style.backgroundPosition = `center ${scrollY * 0.05}px`;
+      (gradient as HTMLElement).style.backgroundPosition = `center ${scrollY * 0.04}px`;
     });
   });
   

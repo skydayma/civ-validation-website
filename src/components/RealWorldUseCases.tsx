@@ -52,21 +52,21 @@ const getTagColor = (tag: string) => {
 
 const RealWorldUseCases = () => {
   return (
-    <section id="use-cases" className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-white relative">
+    <section id="use-cases" className="py-12 md:py-16 bg-gradient-to-br from-gray-50 to-white relative">
       {/* Background elements */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-civ-lightgreen/20 rounded-full blur-3xl -z-10"></div>
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-civ-blue/10 rounded-full blur-3xl -z-10"></div>
       
       <div className="section-container relative z-10">
-        <div className="text-center mb-16 animate-on-scroll">
+        <div className="text-center mb-10 animate-on-scroll">
           <span className="bg-civ-green/20 text-civ-darkblue px-4 py-2 rounded-full font-medium text-sm">Success Stories</span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-6 gradient-text">Real-World Use Cases of cIV</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-4 gradient-text">Real-World Use Cases of cIV</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             See how our Continuous Intelligent Validation platform solves critical challenges across regulated industries.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
           {useCase.map((item, index) => (
             <Card 
               key={item.id} 
@@ -75,21 +75,21 @@ const RealWorldUseCases = () => {
             >
               <CardContent className="p-0">
                 <div className="h-2 bg-gradient-to-r from-civ-blue to-civ-green"></div>
-                <div className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-gradient-to-br from-civ-blue to-civ-darkblue w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                      <item.icon className="h-7 w-7 text-white" />
+                <div className="p-5">
+                  <div className="flex items-start gap-3">
+                    <div className="bg-gradient-to-br from-civ-blue to-civ-darkblue w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                      <item.icon className="h-6 w-6 text-white" />
                     </div>
                     
                     <div>
-                      <div className="flex flex-wrap gap-2 mb-2">
+                      <div className="flex flex-wrap gap-2 mb-1">
                         <Badge className={`${getTagColor(item.tag)} border-none`}>{item.tag}</Badge>
                       </div>
-                      <h3 className="text-xl font-semibold mb-3 text-gray-800">{item.title}</h3>
-                      <p className="text-gray-600 mb-4">{item.description}</p>
+                      <h3 className="text-xl font-semibold mb-2 text-gray-800">{item.title}</h3>
+                      <p className="text-gray-600 mb-3">{item.description}</p>
                       
-                      <div className="mt-4">
-                        <div className="bg-civ-lightgreen/30 px-3 py-2 rounded-lg inline-flex items-center">
+                      <div className="mt-2">
+                        <div className="bg-civ-lightgreen/30 px-3 py-1.5 rounded-lg inline-flex items-center">
                           <span className="text-sm font-semibold text-civ-darkblue">{item.stat}</span>
                         </div>
                       </div>

@@ -56,10 +56,10 @@ const steps = [
 
 const Process = () => {
   return (
-    <section id="how-it-works" className="py-16 md:py-24 bg-white">
+    <section id="how-it-works" className="py-12 md:py-16 bg-white">
       <div className="section-container">
-        <div className="text-center mb-16 animate-on-scroll">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">How cIV Works</h2>
+        <div className="text-center mb-10 animate-on-scroll">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">How cIV Works</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Our step-by-step process ensures thorough validation with minimal manual effort.
           </p>
@@ -69,13 +69,13 @@ const Process = () => {
           {/* Connection line */}
           <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-civ-lightgreen -ml-0.5 z-0"></div>
           
-          <div className="space-y-16">
+          <div className="space-y-12">
             {steps.map((step, index) => (
               <div key={step.id} className="animate-on-scroll relative">
-                <div className={`md:flex items-center gap-8 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+                <div className={`md:flex items-center gap-6 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
                   <div className={`hidden md:block w-1/2 ${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
-                    <div className={`inline-block ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
-                      <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+                    <div className={`inline-block ${index % 2 === 0 ? 'pr-6' : 'pl-6'}`}>
+                      <h3 className="text-xl font-semibold mb-1">{step.title}</h3>
                       <p className="text-gray-600">{step.description}</p>
                     </div>
                   </div>
@@ -84,8 +84,8 @@ const Process = () => {
                     {step.icon}
                   </div>
                   
-                  <div className="md:hidden mt-4 text-center">
-                    <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+                  <div className="md:hidden mt-3 text-center">
+                    <h3 className="text-xl font-semibold mb-1">{step.title}</h3>
                     <p className="text-gray-600">{step.description}</p>
                   </div>
                   
@@ -96,9 +96,9 @@ const Process = () => {
           </div>
         </div>
         
-        <div className="mt-20 flex justify-center animate-on-scroll">
-          <div className="max-w-3xl w-full bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm">
-            <h3 className="text-xl font-semibold mb-4 text-center">Process Visualization</h3>
+        <div className="mt-16 flex justify-center animate-on-scroll">
+          <div className="max-w-3xl w-full bg-gray-50 rounded-2xl p-6 border border-gray-100 shadow-sm">
+            <h3 className="text-xl font-semibold mb-3 text-center">Process Visualization</h3>
             <div className="aspect-video bg-white rounded-lg border border-gray-100 flex items-center justify-center">
               <iframe 
                 src="https://www.youtube.com/embed/2gkOm9BOYn0" 

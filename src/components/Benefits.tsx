@@ -40,21 +40,21 @@ const benefits = [
 
 const Benefits = () => {
   return (
-    <section id="benefits" className="py-16 md:py-24 bg-gradient-to-br from-white to-blue-50 relative">
+    <section id="benefits" className="py-12 md:py-16 bg-gradient-to-br from-white to-blue-50 relative">
       {/* Background decorative elements */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-civ-lightgreen/20 rounded-full blur-3xl -z-10"></div>
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-civ-blue/10 rounded-full blur-3xl -z-10"></div>
       
       <div className="section-container relative z-10">
-        <div className="text-center mb-16 animate-on-scroll">
+        <div className="text-center mb-10 animate-on-scroll">
           <span className="bg-civ-lightgreen/50 text-civ-darkblue px-4 py-2 rounded-full font-medium text-sm">Key Benefits</span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-6 gradient-text">Benefits of Using cIV</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-4 gradient-text">Benefits of Using cIV</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Our platform delivers tangible results that transform how validation is performed in regulated industries.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
           {benefits.map((benefit, index) => (
             <div 
               key={benefit.id} 
@@ -63,20 +63,20 @@ const Benefits = () => {
             >
               <Card className="h-full border-none shadow-lg hover:shadow-xl transition-all duration-300 rounded-2xl overflow-hidden">
                 <div className={`h-2 w-full bg-gradient-to-r ${benefit.color}`}></div>
-                <CardContent className="p-6">
-                  <div className="flex items-center justify-center mb-6">
-                    <div className={`h-16 w-16 rounded-full bg-gradient-to-br ${benefit.color} flex items-center justify-center text-white shadow-lg`}>
+                <CardContent className="p-5">
+                  <div className="flex items-center justify-center mb-4">
+                    <div className={`h-14 w-14 rounded-full bg-gradient-to-br ${benefit.color} flex items-center justify-center text-white shadow-lg`}>
                       {benefit.icon}
                     </div>
                   </div>
                   
                   <div className="text-center">
-                    <div className="mb-4">
+                    <div className="mb-3">
                       <span className={`text-4xl font-bold bg-gradient-to-br ${benefit.color} bg-clip-text text-transparent`}>
                         {benefit.percentage}
                       </span>
                     </div>
-                    <h3 className="font-semibold mb-3 text-lg">{benefit.title}</h3>
+                    <h3 className="font-semibold mb-2 text-lg">{benefit.title}</h3>
                     <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
                   </div>
                 </CardContent>

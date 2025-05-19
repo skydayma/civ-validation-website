@@ -22,13 +22,15 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Navbar />
       <Hero />
-      <Features />
-      <Benefits />
-      <Process />
-      <RealWorldUseCases />
-      <CaseStudies />
-      <WhyChoose />
-      <CTA />
+      <div className="space-y-0"> {/* Removed space between sections */}
+        <Features />
+        <Benefits />
+        <Process />
+        <RealWorldUseCases />
+        <CaseStudies />
+        <WhyChoose />
+        <CTA />
+      </div>
       <Footer />
     </div>
   );
